@@ -29,18 +29,24 @@ $$-->
 
 <center>
 
-[math equation 1](/images/math_equation_1.svg)
+![math equation 1](/images/math_equation_1.svg)
 
 </center>
 
 <br>
 
-Neste caso, $x$ pode assumir qualquer valor dentro do conjunto $\ \{1, 3, 4, 10, 37\}$. O mesma ideia pode ser aplicada a qualquer linguagem de programação. Ou seja, 
-quando falamos de javascript, esse conceito também é válido, mas como a linguagem é [**fracamente tipada**](https://brainly.com.br/tarefa/19678739), a variável "$x$" em questão pode assumir qualquer valor dentro de um conjunto de quaisquer **tipos pré-definidos** na linguagem. Fazendo uma analogia com a matemática, temos o seguinte exemplo:
+Neste caso, <!--$x$-->![x](/images/x.svg) pode assumir qualquer valor dentro do conjunto <!--$\ \{1, 3, 4, 10, 37\}$-->![math equation 2](/images/math_equation_2.svg). O mesma ideia pode ser aplicada a qualquer linguagem de programação. Ou seja, 
+quando falamos de javascript, esse conceito também é válido, mas como a linguagem é [**fracamente tipada**](https://brainly.com.br/tarefa/19678739), a variável "<!--$x$-->![x](/images/x.svg)" em questão pode assumir qualquer valor dentro de um conjunto de quaisquer **tipos pré-definidos** na linguagem. Fazendo uma analogia com a matemática, temos o seguinte exemplo:
 
-$$
-x \ \in \ \{1, 'casa', 1.35, null, undefined, Infinity, "praça", ...\} 
-$$
+<!--$$
+x \ \in \ \{1, 'casa', 1.35, null, undefined, Infinity, "jardim", ...\} 
+$$-->
+
+<center>
+
+![math equation 3](images/math_equation_3.svg)
+
+</center>
 
 <br>
 
@@ -56,13 +62,13 @@ Destrinchando os elementos do conjunto acima em **tipos**, podemos montar a segu
 null | object
 undefined | undefined
 Infinity | number
-"praça" | string
+"jardim" | string
 
 </center> 
 
 <br>
 
-Note que tanto o número $1$ quanto o valor fracionário $1.35 =\frac{27}{20}$ ou até mesmo a palavra $Infinity$ (sem aspas simples ou duplas) são todos considerados como **números** (***number***). Observe também que tanto a palavra 'casa' quanto "praça" são ambas consideradas como ***string***, que nada mais é do que uma **sequência de caracteres**. Tanto aspas simples quanto aspas duplas caracterizam strings, mas existem [**prós e contras**](https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/) quanto ao uso de uma forma ou outra. Veremos logo a seguir a tipagem de variáveis mais a fundo.
+Note que tanto o número <!--$1$-->![1](images/1.svg) quanto o valor fracionário <!--$1.35 =\frac{27}{20}$-->![math equation 4](images/math_equation_4.svg) ou até mesmo a palavra $Infinity$ (sem aspas simples ou duplas) são todos considerados como **números** (***number***). Observe também que tanto a palavra 'casa' quanto "jardim" são ambas consideradas como ***string***, que nada mais é do que uma **sequência de caracteres**. Tanto aspas simples quanto aspas duplas caracterizam strings, mas existem [**prós e contras**](https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/) quanto ao uso de uma forma ou outra. Veremos logo a seguir a tipagem de variáveis mais a fundo.
 
 <br>
 
@@ -70,15 +76,22 @@ Note que tanto o número $1$ quanto o valor fracionário $1.35 =\frac{27}{20}$ o
 
 Em javascript, tempos os seguintes tipos de variáveis: ***number***, ***string***, *object* e *undefined*. Os dois tipos mais importantes para nós no momento são **number** e **string**. A variável do tipo **number** pode ser um número real ou infinito. Em notação matemática, temos:
 
-$$
+<!--$$
 se \ x \ é \ um \ número, \ então \ x \ \in \ \R \ \cup \ \{-\infin, +\infin\}
-$$
+$$-->
+
+<center>
+
+![math equation 5](images/math_equation_5.svg)
+
+</center>
 
 <br>
 Exemplos:
 
 <center>
 
+<!--
  Valor | Conjunto | Descrição
 :-----:|:--------:|:--------:
 0 | $\Z$ | Inteiros
@@ -89,6 +102,18 @@ Exemplos:
 3.14159265359... | $\mathbb{I}$ | Irracionais
 -Infinity | $\{-\infin\}$ | ----------
 Infinity | $\{+\infin\}$ | ----------
+-->
+
+ Valor | Conjunto | Descrição
+:-----:|:--------:|:--------:
+0 | ![I](/images/I.svg) | Inteiros
+1 | ![N](images/N.svg) | Naturais
+1.35 | ![Q](images/Q.svg) | Racionais
+2048 | ![N](images/N.svg) | Naturais
+2.71828182845... | ![I](images/I.svg) | Irracionais
+3.14159265359... | ![I](images/I.svg) | Irracionais
+-Infinity | ![-infty](images/-infty.svg) | ----------
+Infinity | ![+infty](images/+infty.svg) | ----------
 
 </center>
 
