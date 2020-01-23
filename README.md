@@ -68,7 +68,7 @@ Infinity | number
 
 <br>
 
-Note que tanto o número <!--$1$-->![1](images/1.svg) quanto o valor fracionário <!--$1.35 =\frac{27}{20}$-->![math equation 4](images/math_equation_4.svg) ou até mesmo a palavra $Infinity$ (sem aspas simples ou duplas) são todos considerados como **números** (***number***). Observe também que tanto a palavra 'casa' quanto "jardim" são ambas consideradas como ***string***, que nada mais é do que uma **sequência de caracteres**. Tanto aspas simples quanto aspas duplas caracterizam strings, mas existem [**prós e contras**](https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/) quanto ao uso de uma forma ou outra. Veremos logo a seguir a tipagem de variáveis mais a fundo.
+Note que tanto o número <!--$1$-->![1](images/1.svg) quanto o valor fracionário <!--$1.35 =\frac{27}{20}$-->![math equation 4](images/math_equation_4.svg) ou até mesmo a palavra *Infinity* (sem aspas simples ou duplas) são todos considerados como **números** (***number***). Observe também que tanto a palavra 'casa' quanto "jardim" são ambas consideradas como ***string***, que nada mais é do que uma **sequência de caracteres**. Tanto aspas simples quanto aspas duplas caracterizam strings, mas existem [**prós e contras**](https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/) quanto ao uso de uma forma ou outra. Veremos logo a seguir a tipagem de variáveis mais a fundo.
 
 <br>
 
