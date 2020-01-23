@@ -23,9 +23,15 @@
 ## 1. Variáveis
 Na matemática o termo variável é dado ao símbolo que representa qualquer elemento dentro de um conjunto. Abaixo, temos um exemplo de variável pertencente ao conjunto $\ U$:
 
-$$
+<!--$$
 x \ \in \ \{1, 3, 4, 10, 37\} = U
-$$
+$$-->
+
+<center>
+
+[math equation 1](/images/math_equation_1.svg)
+
+</center>
 
 <br>
 
