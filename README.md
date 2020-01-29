@@ -1,26 +1,31 @@
 # Fundamentos de Javascript
 
 ## Índice
-1. Variáveis
+1. Conteúdo
+2. Variáveis
    1. Tipo de variáveis
    2. Instanciando variáveis
-2. Operadores
+3. Operadores
    1. Aritméticos
    2. Lógicos
    3. Binários
    4. De Atribuição
    5. De Incremento/Decremento
-3. Precedência de operadores
-4. Arranjos (***Arrays***)
-5. Fluxo de controle
-6. Funções
-7. Classes e Objetos
-8. Herança
-9. Polimorfismo
+4. Precedência de operadores
+5. Arranjos (***Arrays***)
+6. Fluxo de controle
+7. Funções
+8. Tipos abstratos de dados
+   1. Classes e Objetos
+   2. Herança
+   3.  Polimorfismo
 
 <br>
 
-## 1. Variáveis
+## 1. Conteúdo:
+
+
+## 2. Variáveis
 Na matemática o termo variável é dado ao símbolo que representa qualquer elemento dentro de um conjunto. Abaixo, temos um exemplo de variável pertencente ao conjunto <!--$\ U$-->![U](images/U.svg):
 
 <!--$$
@@ -72,7 +77,7 @@ Note que tanto o número <!--$1$-->![1](images/1.svg) quanto o valor fracionári
 
 <br>
 
-## 2. Tipos de Variáveis
+## 2.i. Tipos de Variáveis
 
 Em javascript, tempos os seguintes tipos de variáveis: ***number***, ***string***, *object* e *undefined*. Os dois tipos mais importantes para nós no momento são **number** e **string**. A variável do tipo **number** pode ser um número real ou infinito. Em notação matemática, temos:
 
@@ -123,24 +128,124 @@ Ou seja, temos todas as representações numéricas possíveis, além da represe
 
 <center>
 
- Valor  |  Tipo  |  Texto
-:------:|:------:|:-------:
-'teste' | *string* | teste
-'123' | *string* | 123
-123 | *number* | ----------
-2.675 | *number* | ----------
-"4.674" | *string* | 4.674
-"0" | *string* | 0
-'Infinity' | *string* | Infinity
-Infinity | *number* | ----------
-"-Infinity" | *string* | -Infinity
--Infinity | *number* | ----------
-"strings 'são' confusas" | *string* | strings 'são' confusas
-'não "é" mesmo?' | *string* | não "é" mesmo?
-'' | *string* | *null*
-"" | *string* | *null*
+ Linha | Valor  |  Tipo  |  Texto
+:-----:|:------:|:------:|:-------:
+1 | 'teste' | *string* | teste
+2 | '123' | *string* | 123
+3 | 123 | *number* | ----------
+4 | 2.675 | *number* | ----------
+5 | "4.674" | *string* | 4.674
+6 | "0" | *string* | 0
+7 | 'Infinity' | *string* | Infinity
+8 | Infinity | *number* | ----------
+9 | "-Infinity" | *string* | -Infinity
+10 | -Infinity | *number* | ----------
+11 | "strings 'são' confusas" | *string* | strings 'são' confusas
+13 | "strings \\"são\\" confusas" | *string* | strings "são" confusas
+12 | 'não "são" mesmo?' | *string* | não "são" mesmo?
+14 | 'não \\'são\\' mesmo?' | *string* | não 'são' mesmo?
+15 | '' | *string* | *null*
+16 | "" | *string* | *null*
+
 
 </center>
+
+<br>
+
+Note, nas linhas 2 e 3, que existe uma diferença sutil entre ambos os valores. A diferença se dá pelas aspas simples que faz com que o javascript entenda que o valor '123' seja uma ***string*** ao invés de um número, que é o caso da linha 3. O mesmo vale pras linhas 4 e 5, pois não existe diferença entre usar aspas simples ou duplas ao escrever uma ***string***. Outro caso que pode gerar confusão é o presente nas linhas 7, 8, 9 e 10, em que colocamos a palavra *Infinity* com e sem aspas simples ou duplas. Mais uma vez, aspas simples ou duplas não farão diferença no contexto usual do javascript, mas a diferença se dá na caracterização do valor escrito. **'Infinity'** se trata de uma string ao passo que **Infinity** funciona como um valor numérico (veremos mais adiante o uso da palavra Infinity). O mesmo vale para o caso de **-Infinity** e **"-Infinity"**.
+
+Voltemos nosso olhar agora para as linhas 11, 12, 13 e 14. A flexibilidade no uso da aspas simples ou duplas, permite que escrevamos aspas simples (linha 11) dentro de uma determinada string desde que no início e o fim da string sejam usadas aspas duplas. O mesmo vale para o exemplo da linha 13, em que iniciamos e terminamos com aspas simples e destacamos a palavra "**são**" com aspas duplas. Em muitas linguagens, como Java (Java não é abreviação para Javascript), não temos essa mesma flexibilidade e mesmo no Javascript podem acontecer cenários em que teremos que nos limitar a apenas uma forma de representação para ***strings***. Nesses casos, devemos proceder como nas linhas 12 e 14 em que usamos o caractere de escapamento "\\" para fazer com que o Javascript entenda que tanto as aspas simples quanto duplas definidas no meio de uma ***string*** não representem o início ou fim de uma ***string***.
+
+Nota: FALAR SOBRE VARIÁVEIS PRIMITIVAS??? <CONFIRMAR ESTA INFORMACAO!!!>
+
+<br>
+
+## 2.ii. Instanciando variáveis
+
+Primeiramente, entendamos o que significa "instanciar variáveis". É simplesmente o ato de se atribuir um determinado valor a uma variável. Fazemos isso para guardar o valor em um determinado local na memória (RAM a princípio) do computador. Isso é útil em N cenários, como veremos mais adiante (nos exercícios, principalmente).
+
+Instanciar variáveis no Javascript é bem simples, basta fazer como no exemplo abaixo:
+
+```javascript
+var variavel = 'este é o valor da variável';
+```
+
+
+
+Observe que mesmo sendo simples, precisamos tomar cuidado com alguns detalhes tanto quanto a **declaração** quanto a **atribuição** de valor a uma variável. Sim, na linha acima fizemos os dois comandos: **declarar** e **atribuir**. Fizemos dessa forma porque esse é o jeito mais comum que todo programador usa para instanciar novas variáveis. Além disso, existem regras a serem utilizadas tanto na declaração quanto na atribuição. O mau uso das regras provocará o que chamamos de **erro de compilação**. Veremos as regras um pouco mais adiante. Vejamos, primeiramente, como faríamos pra quebrar o comando acima nos dois comandos: **declaração** e **aribuição**. Seja o exemplo abaixo:
+
+```javascript
+var variavel;
+variavel = 'este é o valor da variável';
+```
+
+Observe que na primeira linha usamos a palavra ***var***. Esta palavra é usada sempre que desejamos declarar uma nova variável. A ausência dela provocará erro e o programa não executará corretamente. Isso foi feito dessa forma para dizer ao computador que desejamos reservar um local na memória para guardar um dado, podendo ser de qualquer um dos tipos que foram explicados na seção anterior. Além disso, no mesmo comando damos o nome "variavel" a este "local" da memória que desejamos reservar.
+
+Na segunda linha, usamos o sinal de igual para dizer que um determinado **valor**, no caso a ***string*** "**este é o valor da variável**", será armazenado no espaço de memória que nomeamos de "**variavel**". A este sinal de igual damos o nome de **operador de atribuição** (veremos mais operadores na próxima seção). Observe ainda que independentemente do comando, ele sempre termina com um ponto-e-vírgula. Esse elemento nem sempre é indispensável, mas as [**boas práticas**](INSERIR.LINK.AQUI) de programação nos falam que é sempre bom utilizar o símbolo. Ele mostra para o computador a finalização da linha de comando. Isso foi feito dessa forma, em Javascript, para dar a liberdade de se colocar vários comandos numa mesma linha. Poderíamos, por exemplo, reescrever as duas linhas de código da seguinte forma:
+
+```javascript
+var variavel; variavel = 'este é o valor da variável';
+```
+
+<br>
+
+## 3. Operadores
+
+Se as variáveis representam "o que" de um dado sistema, então os operadores seriam o "como". Podemos dividir os operadores em 5 grupos: **aritméticos**, **lógicos**, **binários**, de **atribuição** e de **incremento**/**decremento**. Destes, os mais importantes para nós no momento são os dois primeiros, pois é com eles que executaremos 99% das operações mais comumente encontradas em qualquer trecho de códido (em qualquer linguagem).
+
+<br>
+
+## 3.i Aritméticos
+
+<br>
+
+## 3.ii Lógicos
+
+<br>
+
+## 3.iii Binários
+
+<br>
+
+## 3.iv De Atribuição
+
+<br>
+
+## 3.v De Incremento/Decremento
+
+<br>
+
+## 4. Precedência de operadores
+
+<br>
+
+## 5. Arranjos (***Arrays***)
+
+Seja em qualquer linguagem de programação, em qualquer tipo de aplicação, você provavelmente terá de lidar com Arranjos ou ***Arrays***. Este é mais um elemento básico que faz parte da estrutura de dados e com ele somos capazes de descrever estruturas muito mais complexas e abstratas, como listas, árvores e grafos. Um ***array*** é uma maneira de organizarmos sequencialmente, na memória do computador, um conjunto de dados.
+
+<br>
+
+## 6. Fluxo de controle
+
+<br>
+
+## 7. Funções
+
+<br>
+
+## 8. Tipos abstratos de dados
+
+<br>
+
+## 8.i. Classes e Objetos
+
+<br>
+
+## 8.ii. Herança
+
+<br>
+
+## 8.iii. Polimorfismo
 
 <br>
 
