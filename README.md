@@ -12,9 +12,20 @@
    4. De Atribuição
    5. De Incremento/Decremento
 4. Precedência de operadores
-5. Arranjos (***Arrays***)
+5. Estruturas básicas de dados
+   1. Arranjos (***Arrays***)
+   2. Dicionários
 6. Fluxo de controle
+   1. Bloco de código **{ ... }**
+   2. Escopo de uma variável
+   3. Decisão com ***if-else***
+   4. Laço de repetição com ***while***
+   5. Alternativa ao ***while*** com o ***do-while***
+   6. Laço de repetição com ***for***
+   7. Laço de repetição com ***foreach***
 7. Funções
+   1. Retorno de uma função
+   2. Recursividade
 8. Tipos abstratos de dados
    1. Classes e Objetos
    2. Herança
@@ -24,6 +35,7 @@
 
 ## 1. Conteúdo:
 
+<br>
 
 ## 2. Variáveis
 Na matemática o termo variável é dado ao símbolo que representa qualquer elemento dentro de um conjunto. Abaixo, temos um exemplo de variável pertencente ao conjunto <!--$\ U$-->![U](images/U.svg):
@@ -219,13 +231,92 @@ Se as variáveis representam "o que" de um dado sistema, então os operadores se
 
 <br>
 
-## 5. Arranjos (***Arrays***)
+## 5 Estruturas básicas de dados
 
-Seja em qualquer linguagem de programação, em qualquer tipo de aplicação, você provavelmente terá de lidar com Arranjos ou ***Arrays***. Este é mais um elemento básico que faz parte da estrutura de dados e com ele somos capazes de descrever estruturas muito mais complexas e abstratas, como listas, árvores e grafos. Um ***array*** é uma maneira de organizarmos sequencialmente, na memória do computador, um conjunto de dados.
+Chamamos este tópico de "estrutura básicas de dados" porque não cobriremos neste tópico estruturas mais avançadas como árvores e grafos. São duas as principais estruturas: ***arrays*** e ***dictionaries***.
+
+<br>
+
+## 5.i. Arranjos (***Arrays***)
+
+Seja em qualquer linguagem de programação, em qualquer tipo de aplicação, você provavelmente terá de lidar com Arranjos ou ***Arrays***. Este é mais um elemento básico que faz parte da estrutura de dados e com ele somos capazes de descrever estruturas muito mais complexas e abstratas, como listas, árvores e grafos. Um ***array*** é uma maneira de organizarmos sequencialmente, na memória do computador, um conjunto de dados. Eles são indispensáveis também para tratarmos os [**laços de repetição**](LINK_AQUI) que será um assunto tratado na próxima seção.
+
+Na verdade, já vimos um tipo clássico de array implicitamente, quando falamos do tipo de dados ***string***. Internamente em muitas senão todas as linguagens as strings possuem internamente em sua strutura uma sequência (***array***) [**imutável**](LINK_IMUTABILIDADE_DE_ARRAYS_NO_JAVASCRIPT) de caracteres. Tomemos aqui o mesmo exemplo visto no tópico 2:
+
+```javascript
+var variavel = 'este é o valor da variável';
+```
+
+A variável acima, que nomeamos como "**variavel**", pode ser vista como uma sequência de caracteres que começa com "**e**" e termina com "**l**". Mas como fazemos pra acessarmos cada caractere? Todo array em Javascript é [**indexado**](LINK_EXPLICANDO_INDEXACAO) e tem seu índice começando em zero e terminando na quantidade de elementos, no caso caracteres, menos um. Matematicamente, seja **n** o tamanho do ***array*** e qn <COLOCAR_N_SUBESCRITO>:
+
+<center>
+
+$$
+q_n = n - 1
+$$
+
+</center>
+
+<br>
+
+A notação usada, em outras palavras, [**sintaxe**](LINK_EXPLICANDO_SINTAXE), em Javascript para que se acesse qualquer elemento de um dado índice i é dada por **a\[i\]**, onde **a** é o array em questão. Assim, o acesso aos caracteres da string armazenada na variável abaixo seria dado como na tabela que segue:
+
+```javascript
+var logradouro = 'Rua Leopoldina';
+```
+
+<center>
+
+ Sintaxe | Valor
+:-------:|:-----:
+logradouro[0] | 'R'
+logradouro[1] | 'u'
+logradouro[2] | 'a'
+logradouro[3] | ' '
+logradouro[4] | 'L'
+logradouro[5] | 'e'
+logradouro[6] | 'o'
+logradouro[7] | 'p'
+. . . | . . .
+logradouro[13] | 'a'
+
+</center>
+
+<br>
+
+## 5.ii. Dicionários (***Dictionaries***)
 
 <br>
 
 ## 6. Fluxo de controle
+
+<br>
+
+## 6.i. 
+
+<br>
+
+## 6.ii. 
+
+<br>
+
+## 6.iii. Decisão com ***if-else***
+
+<br>
+
+## 6.iv. Laço de repetição com ***while***
+
+<br>
+
+## 6.v. Alternativa ao ***while*** com o ***do-while***
+
+<br>
+
+## 6.vi. Laço de reperição com ***for***
+
+<br>
+
+## 6.vii. Laço de repetição com ***foreach***
 
 <br>
 
