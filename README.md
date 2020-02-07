@@ -193,7 +193,7 @@ variavel = 'este é o valor da variável';
 
 Observe que na primeira linha usamos a palavra ***var***. Esta palavra é usada sempre que desejamos declarar uma nova variável. A ausência dela provocará erro e o programa não executará corretamente. Isso foi feito dessa forma para dizer ao computador que desejamos reservar um local na memória para guardar um dado, podendo ser de qualquer um dos tipos que foram explicados na seção anterior. Além disso, no mesmo comando damos o nome "variavel" a este "local" da memória que desejamos reservar.
 
-Na segunda linha, usamos o sinal de igual para dizer que um determinado **valor**, no caso a ***string*** "**este é o valor da variável**", será armazenado no espaço de memória que nomeamos de "**variavel**". A este sinal de igual damos o nome de **operador de atribuição** (veremos mais operadores na próxima seção). Observe ainda que independentemente do comando, ele sempre termina com um ponto-e-vírgula. Esse elemento nem sempre é indispensável, mas as [**boas práticas**](INSERIR.LINK.AQUI) de programação nos falam que é sempre bom utilizar o símbolo. Ele mostra para o computador a finalização da linha de comando. Isso foi feito dessa forma, em Javascript, para dar a liberdade de se colocar vários comandos numa mesma linha. Poderíamos, por exemplo, reescrever as duas linhas de código da seguinte forma:
+Na segunda linha, usamos o sinal de igual para dizer que um determinado **valor**, no caso a ***string*** "**este é o valor da variável**", será armazenado no espaço de memória que nomeamos de "**variavel**". A este sinal de igual damos o nome de **operador de atribuição** (veremos mais operadores na próxima seção). Observe ainda que independentemente do comando, ele sempre termina com um ponto-e-vírgula. Esse elemento nem sempre é indispensável, mas as [**boas práticas**](https://pt.stackoverflow.com/questions/3341/utilizar-ou-n%C3%A3o-ponto-e-v%C3%ADrgula-no-fim-das-linhas-no-javascript) de programação nos falam que é sempre bom utilizar o símbolo. Ele mostra para o computador a finalização da linha de comando. Isso foi feito dessa forma, em Javascript, para dar a liberdade de se colocar vários comandos numa mesma linha. Poderíamos, por exemplo, reescrever as duas linhas de código da seguinte forma:
 
 ```javascript
 var variavel; variavel = 'este é o valor da variável';
@@ -207,27 +207,108 @@ Se as variáveis representam "o que" de um dado sistema, então os operadores se
 
 <br>
 
-## 3.i Aritméticos
+## 3.i [Aritméticos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+
+<center>
+
+Nome | Operador
+:---:|:--------:
+Adição | +
+Subtração | -
+Divisão | /
+Multiplicação | *
+Módulo | %
+Exponenciação | **
+Negação Unária | -
+
+</center>
 
 <br>
 
-## 3.ii Lógicos
+## 3.ii [Lógicos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos)
+
+<center>
+
+Nome | Operador
+:---:|:--------:
+"Ê" lógico | &&
+"OU" lógico | &#124; &#124;
+"NÃO" lógico | !
+
+</center>
 
 <br>
 
-## 3.iii Binários
+## 3.iii [Binários](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) (***Bitwise***)
+
+<center>
+
+Nome | Operador
+:---:|:--------:
+"Ê" binário | &
+"OU" binário | &#124;
+"XOR" binário | ^
+"NÃO" binário | ~
+*left shift* | <<
+*right shift* | >>
+
+</center>
 
 <br>
 
-## 3.iv De Atribuição
+## 3.iv [De Atribuição](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+
+Sejam **x** e **y** duas variáveis:
+
+<center>
+
+Nome | Operador (forma 1) | Significado (forma 2)
+:---:|:------------------:|:---------------------:
+Atribuição | x = y | x = y
+Atribuição com adição | x += y | x = x + y
+Atribuição com subtração | x -= y | x = x - y
+Atribuição com multiplicação | x *= y | x = x * y
+Atribuição com divisão | x /= y | x = x / y
+Atribuição com resto | x %= y | x = x % y
+Atribuição de exponenciação | x **= y | x = x ** y
+Atribuição de left shift | x <<= y | x = x << y
+Atribuição de right shift | x >>= y | x = x >> y
+Atribuição de bitwise "Ê" | x &= y | x = x & y
+Atribuição de bitwise "XOR" | x ^= y | x = x ^ y
+Atribuição de bitwise "OU" | x &#124;= y | x = x &#124; y
+
+</center>
 
 <br>
 
-## 3.v De Incremento/Decremento
+## 3.v [De Incremento/Decremento](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+
+Nome | Operador
+:---:|:--------:
+Incremento | ++
+Decremento | --
 
 <br>
 
-## 4. Precedência de operadores
+## 4. [Precedência de operadores](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+
+
+<center>
+
+Precedência | Nome | Operadores
+:----------:|:----:|:----------:
+20 | Agrupamento | ( ... )
+19 | Acesso membro a membro | ... **.** ...
+18 | Acesso a membro computado | ... [ ... ]
+17 | Incremento pós-fixado | ... ++
+17 | Incremento / Decremento pós-fixado | ... --
+ |  | 
+ |  | 
+ |  | 
+ |  | 
+ |  | 
+
+</center>
 
 <br>
 
@@ -239,9 +320,9 @@ Chamamos este tópico de "estrutura básicas de dados" porque não cobriremos ne
 
 ## 5.i. Arranjos (***Arrays***)
 
-Seja em qualquer linguagem de programação, em qualquer tipo de aplicação, você provavelmente terá de lidar com Arranjos ou ***Arrays***. Este é mais um elemento básico que faz parte da estrutura de dados e com ele somos capazes de descrever estruturas muito mais complexas e abstratas, como listas, árvores e grafos. Um ***array*** é uma maneira de organizarmos sequencialmente, na memória do computador, um conjunto de dados. Eles são indispensáveis também para tratarmos os [**laços de repetição**](LINK_AQUI) que será um assunto tratado na próxima seção.
+Seja em qualquer linguagem de programação, em qualquer tipo de aplicação, você provavelmente terá de lidar com Arranjos ou ***Arrays***. Este é mais um elemento básico que faz parte da estrutura de dados e com ele somos capazes de descrever estruturas muito mais complexas e abstratas, como listas, árvores e grafos. Um ***array*** é uma maneira de organizarmos sequencialmente, na memória do computador, um conjunto de dados. Eles são indispensáveis também para tratarmos os [**laços de repetição**](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes) que será um assunto tratado na próxima seção.
 
-Na verdade, já vimos um tipo clássico de array implicitamente, quando falamos do tipo de dados ***string***. Internamente em muitas senão todas as linguagens as strings possuem internamente em sua strutura uma sequência (***array***) [**imutável**](LINK_IMUTABILIDADE_DE_ARRAYS_NO_JAVASCRIPT) de caracteres. Tomemos aqui o mesmo exemplo visto no tópico 2:
+Na verdade, já vimos um tipo clássico de array implicitamente, quando falamos do tipo de dados ***string***. Internamente em muitas (senão todas as linguagens) as strings possuem em sua strutura uma sequência (***array***) [**imutável**](https://www.sitepoint.com/immutability-javascript/) de caracteres. Tomemos aqui o mesmo exemplo visto no tópico 2:
 
 ```javascript
 var variavel = 'este é o valor da variável';
