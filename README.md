@@ -203,11 +203,13 @@ var variavel; variavel = 'este é o valor da variável';
 
 ## 3. Operadores
 
-Se as variáveis representam "o que" de um dado sistema, então os operadores seriam o "como". Podemos dividir os operadores em 5 grupos: **aritméticos**, **lógicos**, **binários**, de **atribuição** e de **incremento**/**decremento**. Destes, os mais importantes para nós no momento são os dois primeiros, pois é com eles que executaremos 99% das operações mais comumente encontradas em qualquer trecho de códido (em qualquer linguagem).
+Se as variáveis representam "o que" de um dado sistema, então os operadores seriam o "como". Podemos dividir os operadores em 5 grupos: **aritméticos**, **lógicos**, **binários**, de **atribuição** e de **incremento**/**decremento**. Destes, os mais importantes para nós no momento são os dois primeiros, pois são com eles que executaremos 99% das operações mais comumente encontradas em qualquer trecho de códido (em qualquer linguagem).
 
 <br>
 
 ## 3.i [Aritméticos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+
+Veja abaixo a tabela de operadores disponíveis no Javascript:
 
 <center>
 
@@ -222,6 +224,70 @@ Exponenciação | **
 Negação Unária | -
 
 </center>
+
+### Exemplo 3.i.1:
+
+**Código**:
+```javascript
+var num1 = 10;
+var num2 = 15;
+
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(-num1 + num2);
+```
+**Saída**:
+```log
+25
+-5
+5
+```
+
+<br>
+
+### Exemplo 3.i.2:
+
+**Código**:
+```javascript
+var nome = 'Alice';
+var idade = '36';
+var peso = 55;
+var altura = "1.62";
+
+console.log('Nome: ' + nome + ', idade: ' + idade + ' anos');
+console.log('Peso de ' + nome + ': ' + peso + ' Kg');
+console.log('IMC de ' + nome + ': ' + peso / (altura ** 2));
+```
+**Saída**:
+```log
+Nome: Alice, idade: 36 anos
+Peso de Alice: 55 Kg
+IMC de Alice: 20.957171162932475
+```
+
+<br>
+
+### Exemplo 3.i.3:
+
+**Código**:
+```javascript
+```
+**Saída**:
+```log
+```
+
+<br>
+
+### Exemplo 3.i.4:
+
+**Código**:
+```javascript
+```
+**Saída**:
+```log
+```
+
+<br>
 
 <br>
 
